@@ -179,7 +179,7 @@ child: Stack(
 ),Container(margin: const EdgeInsets.fromLTRB(0, 700, 0, 0),
               alignment: Alignment.topCenter,
               child:Row(mainAxisAlignment:MainAxisAlignment.center,
-                children: [
+                children: [//呃呃复选框还没加
                   const Text('我已阅读并同意'),
                   TextButton(onPressed: () {
                     Navigator.of(context).push(
