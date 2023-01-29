@@ -62,3 +62,65 @@ Center uncolored_forget_passwords(BuildContext context) {//没上色的忘记密
   ),
   );
 }
+
+
+
+///底下还要搭建一个没有绑定手机号的玩意
+///
+/// 
+
+
+
+
+
+
+class Unfindtele extends StatefulWidget{//用户协议的页面
+  @override
+  State<Unfindtele> createState() => _Unfindtele();
+}
+
+class _Unfindtele extends State<Unfindtele> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Unfind(context),);
+  }
+
+}
+
+
+
+
+
+
+
+Center Unfind(BuildContext context) {//没上色的用户名或密码错误组件
+  return Center(child: Container(
+    height: 202,width:263,
+    decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: const [BoxShadow(
+            color: Colors.grey,blurRadius: 10)]),
+    child: Stack(
+        children: [
+          Column(children:  [
+            const SizedBox(height: 27),
+            const SizedBox(height: 17,width: 300,
+              child: Text('账户密码找回', style: TextStyle(color: Colors.grey,fontSize: 14),
+                  textAlign:TextAlign.center
+              ),),const SizedBox(height: 21),
+            Container(width: 184,height: 117,
+              padding: EdgeInsets.fromLTRB(12, 10, 12, 0),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color.fromARGB(255, 210, 166, 232),Color.fromARGB(222, 154, 108, 252)]
+                ),
+                borderRadius: BorderRadius.circular(34)),
+              child: Text('您好！请联系辅导员进行 密码重置！若有疑问，请 加入天外天用户社区qq群： 2群群号：738064793 3群群号：337647539',
+              softWrap: true,
+              style: TextStyle(color: Colors.white,fontSize: 13),),
+            )
+          ],),closebotton(context)]
+    ),
+  ),
+  );}
